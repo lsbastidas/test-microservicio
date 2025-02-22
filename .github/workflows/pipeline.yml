@@ -55,7 +55,7 @@ jobs:
         
     - name: Push Docker image
       run: |
-        docker tag flask-app:${{ github.sha }} MS-Test_FinKargo/flask-app:${{ github.sha }}
+        docker tag flask-app:${{ github.sha }} ${{ secrets.DOCKER_USERNAME }}/flask-app:${{ github.sha }}
         docker push ${{ secrets.DOCKER_USERNAME }}/flask-app:${{ github.sha }}
 
   deploy:
