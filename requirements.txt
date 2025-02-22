@@ -1,1 +1,4 @@
-Flask==2.2.2
+Flask
+werkzeug>=2.1.0
+pytest
+coverage
