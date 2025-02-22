@@ -55,7 +55,7 @@ jobs:
         
     - name: Push Docker image
       run: |
-        FECHA_HORA=$(date +%Y-%m-%dT%H:%M)
+        FECHA_HORA=$(date +%Y-%m-%dT%H-%M)
         docker tag flask-app:${{ github.sha }} ${{ secrets.DOCKER_USERNAME }}/flask-app:${FECHA_HORA}
         docker push ${{ secrets.DOCKER_USERNAME }}/flask-app:${FECHA_HORA}
 
